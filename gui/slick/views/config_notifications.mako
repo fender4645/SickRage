@@ -2670,6 +2670,55 @@
 
             <div class="config-group-divider"></div>
 
+            <!-- /slack component-group //-->
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                    <div class="component-group-desc">
+                        <span class="icon-notifiers-trakt" title="${_('Trakt')}"></span>
+                        <h3><a href="${anon_url('http://slack.com')}" rel="noreferrer" onclick="window.open(this.href, '_blank'); return false;">Slack</a></h3>
+                        <p>${_('Slack is a messaging app built for teams.')}</p>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12">
+                    <fieldset class="component-group-list">
+
+                        <div class="field-pair row">
+                            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                                <label class="component-title">${_('Enable')}</label>
+                            </div>
+                            <div class="col-lg-9 col-md-8 col-sm-7 col-xs-12 component-desc">
+                                <input type="checkbox" class="enabler" name="use_slack" id="use_slack" ${('', 'checked="checked"')[bool(sickbeard.USE_SLACK)]}/>
+                                <label for="use_slack">${_('Send Slack notifications?')}</label>
+                            </div>
+                        </div>
+
+                        <div id="content_use_slack">
+
+                            <div class="field-pair row">
+                                <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                                    <label class="component-title">${_('Slack API Key')}</label>
+                                </div>
+                                <div class="col-lg-9 col-md-8 col-sm-7 col-xs-12 component-desc">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <input type="text" name="slack_api_key" id="slack_api_key" value="${sickbeard.SLACK_API_KEY}" class="form-control input-sm input250" autocapitalize="off" autocomplete="no" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label for="slack_api_key">${_('your Slack api key.')}</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="config-group-divider"></div>
+
+
             <!-- /email component-group //-->
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
